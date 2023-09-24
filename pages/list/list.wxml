@@ -1,2 +1,51 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<!-- <view class="container">
+    <view>A</view>
+    <view>B</view>
+    <view>C</view>
+</view> -->
+
+<!-- <scroll-view class="container" scroll-y>
+    <view>A</view>
+    <view>B</view>
+    <view>C</view>
+</scroll-view> -->
+<!-- 
+<swiper class="container" indicator-dots>
+    <swiper-item>
+        <view>A</view>
+    </swiper-item>
+    <swiper-item>
+        <view>B</view>
+    </swiper-item>
+    <swiper-item>
+        <view>C</view>
+    </swiper-item>
+</swiper> -->
+
+<!-- <view>
+实现长按选中效果
+    <text selectable>1132154654</text>
+</view> -->
+
+<!-- <rich-text nodes="<h1 style='color: red'>标题</h1>"/> -->
+
+<!-- <button>默认按钮</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">主色调按钮</button>
+
+
+<button size="mini">默认按钮</button>
+<button type="primary" size="mini">主色调按钮</button>
+<button type="warn" size="mini">主色调按钮</button>
+
+<button size="mini" plain>默认按钮</button>
+<button type="primary" size="mini" plain>主色调按钮</button>
+<button type="warn" size="mini" plain>主色调按钮</button> -->
+
+<!-- <view>{{info}}</view>
+<image src="{{imgSrc}}" mode="widthFix"/>
+
+<view>{{randomNumber >= 5 ? '数字大于等于5' : '数字小于5'}}</view>
+
+<view>{{number * 100}}</view> -->

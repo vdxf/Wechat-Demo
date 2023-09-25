@@ -49,3 +49,26 @@
 <view>{{randomNumber >= 5 ? '数字大于等于5' : '数字小于5'}}</view>
 
 <view>{{number * 100}}</view> -->
+
+<!-- <button type="primary" bind:tap="onBtnTap">按钮</button> -->
+<!-- <view>{{count}}</view>
+<button type="primary" bind:tap="add" size="mini"> + </button> -->
+
+<!-- <button wx:if="{{true}}" bind:tap="onChangeSex">改变性别</button>
+<block>
+    <view wx:if="{{sex%2 === 0}}">男</view>
+    <view wx:elif="{{sex%3 === 0}}">女</view>
+    <view wx:else>其他</view>
+</block> -->
+
+<!-- <view hidden="{{show}}">通过hidden控制元素的显示与隐藏</view> -->
+
+<!-- <view wx:for="{{arr1}}">
+    索引：{{index}}, 值是：{{item}}
+</view> -->
+
+<!-- <view wx:for="{{userList}}" wx:key="id" class="username">
+    {{item.name}}
+</view> -->
+
+<button bind:tap="getInfo">发起get请求</button>

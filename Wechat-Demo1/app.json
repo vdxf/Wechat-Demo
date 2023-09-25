@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/list/list",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark", 
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#c1c1c1",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list": [
+        {
+            "pagePath": "pages/list/list",
+            "text": "list",
+            "iconPath": "",
+            "selectedIconPath": ""
+        },{
+            "pagePath": "pages/index/index",
+            "text": "index",
+            "iconPath": "",
+            "selectedIconPath": ""
+        }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

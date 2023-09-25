@@ -1,0 +1,7 @@
+<!--pages/message/message.wxml-->
+<!-- 声明式导航---跳转到 tabBar 页面-->
+<navigator open-type="switchTab" url="/pages/contact/contact">导航到联系我们页面</navigator>
+
+<!-- 声明式导航---跳转到 非 tabBar 页面 -->
+<navigator url="/pages/info/info" open-type="navigate" >导航到 info 页面</navigator>
+ <!-- open-type="navigate" 可以省略 -->

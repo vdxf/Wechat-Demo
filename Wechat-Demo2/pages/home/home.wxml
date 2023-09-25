@@ -1,0 +1,20 @@
+<!--pages/home/home.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots indicator-color="white" circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <image src="{{item.imgUrl}}" mode="widthFix"/>
+    </swiper-item>
+</swiper>
+
+<!-- 九宫格 -->
+<view class="grid-list">
+    <view class="grid-item" wx:for="{{gridList}}" wx:key="index">
+        <image src="{{item.imgUrl}}" mode="widthFix"/>
+        <text>{{index}}</text>
+    </view>
+</view>
+
+<view class="bottom">
+    <image src="/images/left.jpg" mode="widthFix"/>
+    <image src="/images/right.jpg" mode="widthFix"/>
+</view>

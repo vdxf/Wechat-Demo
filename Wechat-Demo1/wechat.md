@@ -38,3 +38,24 @@
    - 局部页面的 .wxss 样式仅对当前页面生效
 
 3. WXSS 仅支持部分 CSS 选择器
+
+## 事件
+click -> tap
+
+当事件回调触发时，会收到一个事件对象，它的详细属性如下：
+
+   type            String          事件类型
+
+   timeStamp       Integer         页面打开到触发事件所经过的毫秒数
+   `target`        Object          触发事件的组合的一些属性值集合
+   currentTarget   Object          当前组件的一些属性值集合
+   `datail`        Object          额外的信息
+   touches         Array           触摸事件，当前停留在在屏幕中的触摸点信息的数组
+   changedTouches  Array           触摸事件，当前变化的触摸点信息的数组
+
+## request 注意事项
+
+1. 域名只支持 https 协议
+2. 域名不能使用 IP 地址或 localhost
+3. 域名必须经过 ICP 备案
+4. 服务器域名一个月最多可申请 5 次修改

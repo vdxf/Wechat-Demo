@@ -1,14 +1,11 @@
-// pages/list/list.js
+// pages/message/message.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        // info: 'hello word',
-        // imgSrc: 'http://www.itheima.com/images/logo.png',
-        // randomNumber:Math.random() * 10,
-        // number: Math.random().toFixed(2)
+
     },
 
     /**

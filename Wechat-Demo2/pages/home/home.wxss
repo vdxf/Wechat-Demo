@@ -1,0 +1,33 @@
+/* pages/home/home.wxss */
+swiper {
+    height: 350rpx;
+}
+swiper image {
+    height: 100%;
+    width: 100%;
+}
+.grid-list {
+    padding: 10rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-item {
+    box-sizing: border-box;
+    padding: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+    border: 1rpx solid rgb(250, 233, 236);
+}
+.grid-item image {
+    width: 100%;
+}
+.bottom {
+    display: flex;
+    padding: 10rpx;
+}
+.bottom image {
+    border-radius: 10rpx;
+    margin: 5rpx;
+}

@@ -5,14 +5,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        userName: 'wszs',
+        country: 'CHINA'
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
     },
 
     /**
@@ -21,7 +21,16 @@ Page({
     onReady() {
 
     },
-
+    gotoInfo1(){
+        wx.navigateTo({
+          url: '/pages/info/info',
+        })
+    },
+    gotoInfo2(){
+        wx.navigateTo({
+          url: '/pages/info/info?name=李四&age=20',
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
@@ -40,7 +49,6 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-
     },
 
     /**

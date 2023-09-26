@@ -5,43 +5,39 @@ Page({
      * 页面的初始数据
      */
     data: {
-swiperList: [
-    {imgUrl: "/images/slider01.jpg"},
-    {imgUrl: "/images/slider02.jpg"},
-    {imgUrl: "/images/slider03.jpg"},
-    {imgUrl: "/images/slider04.jpg"},
-    {imgUrl: "/images/slider05.jpg"},
-    {imgUrl: "/images/slider06.jpg"},
-    {imgUrl: "/images/slider07.jpg"},
-],
-gridList: [
-    {imgUrl: "/images/desktop_2.jpg"},
-    {imgUrl: "/images/desktop_3.jpg"},
-    {imgUrl: "/images/desktop_4.jpg"},
-    {imgUrl: "/images/desktop_5.jpg"},
-    {imgUrl: "/images/desktop_6.jpg"},
-    {imgUrl: "/images/desktop_7.jpg"},
-    {imgUrl: "/images/desktop_8.jpg"},
-    {imgUrl: "/images/desktop_9.jpg"},
-    {imgUrl: "/images/desktop_10.jpg"},
-]
+        swiperList: [],
+        gridList: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        // this.getSwiperList()
+        this.getSwiperList()
+        this.getGridList()
     },
-    // getSwiperList(){
-    //     wx.request({
-    //       url: 'https://www.escook.cn/slides',
-    //       methods: 'GET',
-    //       success: (res) => {
-    //           console.log(res)
-    //       }
-    //     })
-    // },
+    getSwiperList(){
+        wx.request({
+          url: 'https://applet-base-api-t.itheima.net/slides',
+          methods: 'GET',
+          success: (res) => {
+              this.setData({
+                  swiperList: res.data
+              })
+          }
+        })
+    },
+    getGridList(){
+        wx.request({
+          url: 'https://applet-base-api-t.itheima.net/categories',
+          methods: 'GET',
+          success: (res) => {
+              this.setData({
+                gridList: res.data
+              })
+          }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -74,7 +70,7 @@ gridList: [
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-
+        console.log('触发了下拉刷新事件')
     },
 
     /**

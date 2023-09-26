@@ -7,9 +7,10 @@ swiper image {
     width: 100%;
 }
 .grid-list {
-    padding: 10rpx;
     display: flex;
     flex-wrap: wrap;
+    border-left: 1rpx solid rgb(250, 233, 236);
+    border-top: 1rpx solid rgb(250, 233, 236);
 }
 .grid-item {
     box-sizing: border-box;
@@ -17,11 +18,19 @@ swiper image {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 33.33%;
-    border: 1rpx solid rgb(250, 233, 236);
+    height: 200rpx;
+    border-right: 1rpx solid rgb(250, 233, 236);
+    border-bottom: 1rpx solid rgb(250, 233, 236);
 }
 .grid-item image {
-    width: 100%;
+    width: 60rpx;
+    height: 60rpx;
+}
+.grid-item text {
+   font-size: 24rpx;
+   margin-top: 10rpx;
 }
 .bottom {
     display: flex;

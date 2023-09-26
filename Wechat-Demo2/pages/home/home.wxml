@@ -1,20 +1,22 @@
 <!--pages/home/home.wxml-->
 <!-- 轮播图 -->
-<swiper indicator-dots indicator-color="white" circular>
-    <swiper-item wx:for="{{swiperList}}" wx:key="index">
-        <image src="{{item.imgUrl}}" mode="widthFix"/>
+<swiper indicator-dots indicator-color="white" circular autoplay interval="2000">
+    <swiper-item wx:for="{{swiperList}}" wx:key="id">
+        <image src="{{item.image}}" mode="widthFix"/>
     </swiper-item>
 </swiper>
 
 <!-- 九宫格 -->
-<view class="grid-list">
-    <view class="grid-item" wx:for="{{gridList}}" wx:key="index">
-        <image src="{{item.imgUrl}}" mode="widthFix"/>
-        <text>{{index}}</text>
-    </view>
+<view class="grid-list g-red-text">
+    <navigator url="/pages/zero/zero?id={{item.id}}&title={{item.name}}" class="grid-item" wx:for="{{gridList}}" wx:key="id">
+        <image src="{{item.icon}}" mode="widthFix"/>
+        <text>{{item.name}}</text>
+    </navigator>
 </view>
 
 <view class="bottom">
     <image src="/images/left.jpg" mode="widthFix"/>
     <image src="/images/right.jpg" mode="widthFix"/>
 </view>
+
+<my-test1 max="9"></my-test1>

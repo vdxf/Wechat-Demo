@@ -1,15 +1,19 @@
 {
   "pages":[
-      "pages/home/home",
+    "pages/home/home",
     "pages/message/message",
     "pages/contact/contact",
-    "pages/info/info"
+    "pages/info/info",
+    "pages/zero/zero"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "本地生活",
     "navigationBarTextStyle":"white"
+  },
+  "usingComponents": {
+      "my-test1": "/components/test/test"
   },
   "tabBar": {
       "list": [{

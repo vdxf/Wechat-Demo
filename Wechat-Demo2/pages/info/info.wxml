@@ -1,4 +1,4 @@
 <!--pages/info/info.wxml-->
 <text>pages/info/info.wxml</text>
 
-<navigator open-type="navigateBack" delta="1">后退导航</navigator>
+<navigator open-type="navigateBack" delta="1">后退</navigator>

@@ -1,0 +1,13 @@
+/* components/test/test.wxss */
+.g-red-text {
+    font-weight: 600;
+}
+.sum {
+    display: flex;
+}
+.colorBox {
+    line-height: 200rpx;
+    font-size: 24rpx;
+    color: #fff;
+    text-align: center;
+}

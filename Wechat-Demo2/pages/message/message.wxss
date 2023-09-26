@@ -1,1 +1,7 @@
 /* pages/message/message.wxss */
+view {
+    margin-bottom: 20rpx;
+}
+button {
+    margin-bottom: 10rpx;
+}

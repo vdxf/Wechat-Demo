@@ -8,7 +8,17 @@ Page({
         userName: 'wszs',
         country: 'CHINA'
     },
-
+    async getInfo3(){
+        const res = await wx.p.request({
+            method: 'GET',
+            url: 'https://applet-base-api-t.itheima.net/api/get',
+            data: {
+                name: 'wangwu',
+                age: 22
+            }
+          })
+          console.log(res)
+    },
     /**
      * 生命周期函数--监听页面加载
      */

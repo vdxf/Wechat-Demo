@@ -1,4 +1,7 @@
 /* pages/home/home.wxss */
+view {
+    margin: 40rpx 0;
+}
 swiper {
     height: 350rpx;
 }

@@ -3,6 +3,6 @@
     "projectname": "LocalLife",
     "setting": {
         "compileHotReLoad": true,
-        "urlCheck": false
+        "urlCheck": true
     }
 }

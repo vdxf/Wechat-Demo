@@ -5,8 +5,26 @@ Page({
      * 页面的初始数据
      */
     data: {
+        count: 0,
         swiperList: [],
         gridList: []
+    },
+    // 3. this.selectComponent
+    getChild(){
+        const child = this.selectComponent('.customA')
+        // console.log(child)
+        child.setData({
+            count: child.properties.count + 1
+        })
+        child.addCount()
+    },
+    // 2. 事件绑定
+    syncCount(e){
+        // console.log('syncCount')
+        // console.log(e.detail.value)
+        this.setData({
+            count: e.detail.value
+        })
     },
 
     /**

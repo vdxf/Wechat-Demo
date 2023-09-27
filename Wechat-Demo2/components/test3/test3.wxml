@@ -1,0 +1,4 @@
+<!--components/test3/test3.wxml-->
+<view>子组件中, count的值是：{{count}}</view>
+<button bind:tap="addCount"> +1 </button>
+<view>在behavior中定义的用户名是：{{username}}</view>

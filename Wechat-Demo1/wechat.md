@@ -59,3 +59,30 @@ click -> tap
 2. 域名不能使用 IP 地址或 localhost
 3. 域名必须经过 ICP 备案
 4. 服务器域名一个月最多可申请 5 次修改
+
+## 小程序的生命周期函数
+
+onLaunch, onShow, onHide
+
+## 页面的生命周期函数
+
+onLoad，onReady，onShow，onHide，onUnload，
+
+## 小程序组件可用的全部生命周期函数
+
+生命周期函数      参数       描述说明
+
+`created`         无        在组件实例刚刚被创建时执行，此时还不能调用 setData
+`attached`        无        在组件实例进入页面节点树时执行，此时this.setData 已被初始化完毕
+  ready           无        在组件在视图层布局完成后执行
+  moved           无        在组件实例被移动到节点树另一个位置时执行
+`detached`        无        在组件实例被从页面节点树移除时执行，
+  error     Object Error    每当组件方法抛出错误时执行
+
+## 组件所在页面的生命周期函数
+
+生命周期函数      参数       描述说明
+
+ show            无         组件所在页面被展示时执行
+ hide            无         组件所在页面被隐藏时执行
+ resize      Object Size    组件所在页面尺寸变化时执行

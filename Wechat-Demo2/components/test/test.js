@@ -1,8 +1,38 @@
-// components/test/test.js
 Component({
+    // 组件的生命周期函数 旧式定义方式
+    // created(){
+    //     console.log('created')
+    // },
+    // attached(){
+    //     console.log('attached')
+    // },
+    // 组件的生命周期函数推荐写法
+    lifetimes: {
+        created(){
+            // console.log('created')
+        },
+        attached(){
+            // console.log('attached')
+        },
+        detached(){
+            // console.log('detached')
+        },
+    },
+    // 组件所在页面的生命周期函数
+    pageLifetimes: {
+        show(){
+            this._randomColor()
+        },
+        hide(){
+            console.log('hide')
+        },
+        resize(){
+            console.log('resize')
+        }
+    },
     options: {
         styleIsolation: 'shared',
-        pureDataPattern: /^_/
+        pureDataPattern: /^_/    // 纯数据字段
     },
     /**
      * 组件的属性列表
@@ -82,6 +112,15 @@ Component({
                 '_rgb.b': this.data._rgb.b + 5 > 255 ? 255 : this.data._rgb.b + 5
             })
         },
+        _randomColor(){
+            this.setData({
+                _rgb: {
+                    r: Math.floor(Math.random() *256),
+                    g: Math.floor(Math.random() *256),
+                    b: Math.floor(Math.random() *256),
+                }
+            })
+        }
     },
     observers: {
         'n1, n2': function(newN1, newN2) {

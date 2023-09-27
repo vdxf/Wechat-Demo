@@ -19,4 +19,16 @@
     <image src="/images/right.jpg" mode="widthFix"/>
 </view>
 
+
+<view>---------------------自定义组件-------------------</view>
+
 <my-test1 max="9"></my-test1>
+
+<view>---------------------组件通信-----------------------</view>
+<!-- 1. 属性绑定 -->
+<my-test3 count="{{count}}" bind:sync="syncCount" class="customA" id="cA"></my-test3>
+ 
+<view>-------------------------------------</view>
+
+<view>父组件中，count的值是：{{count}}</view>
+<button size="mini" bind:tap="getChild">获取子组件的实例对象</button>

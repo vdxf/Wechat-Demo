@@ -49,5 +49,5 @@
 
 <view>---------------------vant组件-------------------</view>
 
-<!-- <van-button type="primary" bind:tap="getInfo3">按钮</van-button> -->
-<!-- <van-button type="danger">按钮</van-button> -->
+<van-button type="primary" bind:tap="getInfo3">按钮</van-button>
+<van-button type="danger">按钮</van-button>

@@ -1,0 +1,1 @@
+<view><view class="search-box"><uni-search-bar vue-id="12091552-1" placeholder="请输入搜索内容" radius="{{100}}" cancelButton="none" value="{{searchValue}}" data-event-opts="{{[['^input',[['__set_model',['','searchValue','$event',[]]],['input']]]]}}" bind:input="__e" bind:__l="__l"></uni-search-bar></view></view>

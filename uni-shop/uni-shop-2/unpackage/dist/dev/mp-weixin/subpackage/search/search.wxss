@@ -10,4 +10,38 @@
 .uni-searchbar {
   background-color: #ff1010;
 }
+.suggest-list {
+  padding: 0 5px;
+}
+.suggest-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+.goods-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.history-box {
+  padding: 5px 10px;
+}
+.history-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+}
+.history-content {
+  margin-top: 10px;
+}
+.uni-tag {
+  margin: 5px;
+  background-color: red;
+}
 

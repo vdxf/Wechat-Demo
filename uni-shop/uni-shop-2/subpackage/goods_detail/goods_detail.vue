@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view v-if="goodsInfo.goods_name" class="goods-container">
     <!-- 轮播图 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
       <swiper-item v-for="(item, i) in goodsInfo.pics" :key="i">
@@ -20,14 +20,55 @@
         <text>快递免运费</text>
       </view>
     </view>
+    
+    <rich-text :nodes="goodsInfo.goods_introduce"></rich-text>
+    
+    <view class="goods-nav">
+      <uni-goods-nav :options="options" :fill="true" :button-group="buttonGroup" @click="onClick" @buttonClick="buttonClick"/>
+    </view>
   </view>
 </template>
 
 <script>
+  import { mapState, mapMutations, mapGetters } from 'vuex'
   export default {
+    computed: {
+      ...mapState('m_cart', []),
+      ...mapGetters('m_cart', ['total'])
+    },
+    watch: {
+      total: {
+        handler(newVal){
+          const findResult = this.options.find(item => {
+            return item.text === '购物车'
+          })
+          if (findResult) {
+            findResult.info = newVal
+          }
+        },
+        immediate: true
+      }
+    },
     data() {
       return {
         goodsInfo: {},
+        options: [{
+          icon: 'shop',
+          text: '店铺',
+        },{      
+          icon: 'cart',
+          text: '购物车',
+          info: 0
+        }],
+        buttonGroup: [{
+          text: '加入购物车',
+          backgroundColor: '#ff0000',
+          color: '#fff'
+        },{
+          text: '立即购买',
+          backgroundColor: '#ffa200',
+          color: '#fff'
+        }]
       };
     },
     onLoad(options) {
@@ -35,11 +76,13 @@
       this.getGoodsDetail(goods_id)
     },
     methods:{
+      ...mapMutations('m_cart', ['addToCart']),
       async getGoodsDetail(id){
         const { data: res } = await uni.$http.get('/api/public/v1/goods/detail?goods_id=' + id)
         if (res.meta.status !== 200) {
           return uni.$showMsg()
         }
+        res.message.goods_introduce = res.message.goods_introduce.replace(/webp/g, 'jpg')
         this.goodsInfo = res.message
       },
       preview(i){
@@ -50,6 +93,26 @@
           }),
         })
       },
+      onClick(e){
+        if (e.content.text === '购物车') {
+          uni.switchTab({
+            url: '/pages/cart/cart'
+          })
+        }
+      },
+      buttonClick(e){
+        if (e.content.text === '加入购物车') {
+          const goods = {
+            goods_id: this.goodsInfo.goods_id,
+            goods_name: this.goodsInfo.goods_name,
+            goods_price: this.goodsInfo.goods_price,
+            goods_count: 1,
+            goods_small_logo: this.goodsInfo.goods_small_logo,
+            goods_state: true,
+          }
+          this.addToCart(goods)
+        }
+      }
     },
   }
 </script>
@@ -93,5 +156,14 @@ swiper {
   font-size: 12px;
   color: #ccc;
   margin: 10px 0;
+}
+.goods-container {
+  padding-bottom: 50px;
+}
+.goods-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>

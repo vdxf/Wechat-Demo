@@ -33,11 +33,31 @@
     methods: {
       ...mapMutations('m_user', ['updataAddress']),
       async handleChooseAddress(){
-        const res = await wx.chooseAddress()
-        if (res.errMsg === "chooseAddress:ok") {
-          this.updataAddress(res)
+        const [err, success] = await uni.chooseAddress().catch(err => err)
+        if (err === null && success.errMsg === "chooseAddress:ok") {
+          this.updataAddress(success)
         }
-      }
+        //用户没有授权
+        if (err && (err.errMsg === 'chooseAddress:fail auth deny' || err.errMsg === 'chooseAddress:fail authorize no response')) {
+          this.reAuth()
+        }
+      },
+      //让用户重新授权
+      async reAuth(){
+        const [err, confirmResult] = await uni.showModal({
+          content: '您没有打开地址权限，是否打开地址权限',
+          confirmText: "确认",
+          cancelText: "取消"
+        })
+        if (err) return
+        if (confirmResult.cancel) return uni.$showMsg('您取消了地址授权！')
+        if (confirmResult.confirm) return uni.openSetting({
+          success(res) {
+            if (res.authSetting['scope.address']) return uni.$showMsg('授权成功，请选择地址')
+            if (!res.authSetting['scope.address']) return uni.$showMsg('您取消了地址授权!')
+          }
+        })
+      },
     },
     computed: {
       ...mapState('m_user', ['address']),

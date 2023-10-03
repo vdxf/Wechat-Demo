@@ -27,6 +27,11 @@ export default {
       }
       this.commit('m_cart/saveToStorage')
     },
+    updataAllRadio(state, checked){
+      state.cart.forEach(item => {
+        return item.goods_state = checked
+      })
+    },
     updataNum(state, options){
       const findResult = state.cart.find(item => {
         return item.goods_id === options.goods_id
@@ -45,11 +50,21 @@ export default {
   },
   getters: {
     total(state){
-      let c = 0
-      state.cart.forEach(item => {
-        return c += item.goods_count
-      })
-      return c
+      return state.cart.reduce((total, item) => {
+        return total += item.goods_count
+      },0)
+    },
+    checkCount(state){
+      const resArr = state.cart.filter(item => item.goods_state)
+      return resArr.reduce((total, item) => {
+        return total += item.goods_count
+      },0)
+    },
+    totalPrice(state){
+      const resArr = state.cart.filter(item => item.goods_state)
+      return resArr.reduce((total, item) => {
+        return total += item.goods_price * item.goods_count
+      },0).toFixed(2)
     }
   }
 }

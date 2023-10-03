@@ -1,6 +1,7 @@
 <template>
-  <view>
-    My
+  <view class="my-view">
+    <my-login></my-login>
+    <my-userinfo></my-userinfo>
   </view>
 </template>
 
@@ -17,5 +18,6 @@
 </script>
 
 <style lang="scss">
-
+.my-view {
+}
 </style>

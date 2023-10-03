@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="cart-view" v-if="cart.length !== 0">
     <my-address></my-address>
     <view class="cart-title">
       <uni-icons type="cart" size="18"></uni-icons>
@@ -12,6 +12,11 @@
         </uni-swipe-action-item>
       </block>
     </uni-swipe-action>
+    <!-- 结算组件 -->
+    <my-settle></my-settle>
+  </view>
+  <view class="empty-cart" v-else>
+    <image src="/static/tab_icons/cartnull.jpg" mode="widthFix"></image>
   </view>
 </template>
 
@@ -53,6 +58,9 @@
 </script>
 
 <style lang="scss">
+.cart-view {
+  padding-bottom: 50px;
+}
 .cart-title {
   height: 40px;
   display: flex;
@@ -62,6 +70,15 @@
   text {
     margin-left: 10px;
     font-size: 14px;
+  }
+}
+.empty-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  image {
+    width: 50%;
   }
 }
 </style>

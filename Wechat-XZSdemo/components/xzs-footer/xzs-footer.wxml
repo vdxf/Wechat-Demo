@@ -1,0 +1,5 @@
+<view class="footer">
+    <view class="row">Copyright © {{ year }} 张三版权所有</view>
+    <view class="row">保留一切权利</view>
+    <view class="row">未经授权，不得复制、发行、表演、展示或制作衍生作品</view>
+</view>

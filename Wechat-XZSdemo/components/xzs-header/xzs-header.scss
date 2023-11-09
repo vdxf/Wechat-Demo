@@ -1,0 +1,20 @@
+.header {
+    height: 128rpx;
+    border: 1px solid var(--themeColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    .logo {
+        height: 70rpx;
+        .pic {
+            height: 100%;
+        }
+    }
+}
+.search {
+    color: var(--themeColor);
+    van-icon {
+        font-size: 50rpx;
+    }
+}

@@ -1,0 +1,60 @@
+<xzs-header></xzs-header>
+<view class="banner">
+    <swiper previous-margin="30rpx" circular autoplay interval="3000" indicator-dots indicator-color="rgba(255, 255, 255, 0.3)" indicator-active-color="#BDA066">
+        <swiper-item>
+            <image src="/images/banner0.jpg" mode=""/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/banner1.jpg" mode=""/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/banner2.jpg" mode=""/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/banner3.jpg" mode=""/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/banner4.jpg" mode=""/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/banner5.jpg" mode=""/>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="scroll-nav">
+    <scroll-view scroll-x>
+        <navigator url="#" class="item" wx:for="{{ 6 }}" wx:key="index">
+            <view class="pic">
+                <image src="/images/banner0.jpg" mode=""/>
+            </view>
+            <view class="text">
+                <text>茶</text>
+            </view>
+        </navigator>
+    </scroll-view>
+</view>
+<view class="about">
+    <view class="pubTitle">
+        <view class="en">introduce</view>
+        <view class="cn">茶文化简介</view>
+        <view class="line"></view>
+    </view>
+    <view class="content">
+        <view class="row">茶文化是指饮茶活动过程中形成的文化特征，包括茶道、茶德、茶精神、茶联、茶书、茶具、茶谱、茶诗、茶画、茶学、茶故事、茶艺等等。茶文化起源地为中国，中国是茶的故乡，中国人饮茶，据说始于神农时代，少说也有4700多年了。</view>
+        <view class="row">中国各地对茶的配制是多种多样的，有太湖的熏豆茶、苏州的香味茶、湖南的姜盐茶、蜀山的侠君茶、台湾的冻顶茶、杭州的龙井茶、福建的乌龙茶等。</view>
+        <view class="row">全世界一百多个国家和地区的人喜爱品茶，各国茶文化各不相同，各有千秋。中国茶文化反映出中华民族的悠久的文明和礼仪。</view>
+    </view>
+</view>
+<view class="news">
+    <view class="pubTitle">
+        <view class="en">News</view>
+        <view class="cn">新闻资讯</view>
+        <view class="line"></view>
+    </view>
+    <view class="content">
+        <view class="box" wx:for="{{3}}" wx:key="index">
+            <xzs-news></xzs-news>
+        </view>
+    </view>
+</view>
+<xzs-footer></xzs-footer>

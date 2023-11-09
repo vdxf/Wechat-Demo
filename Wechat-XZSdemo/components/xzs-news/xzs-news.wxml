@@ -1,0 +1,23 @@
+<!--components/xzs-news/xzs-news.wxml-->
+<view class="news">
+    <view class="pic">
+        <image src="/images/banner0.jpg" mode="aspectFill"/>
+    </view>
+    <view class="text">
+        <view class="title">新闻标题</view>
+        <view class="info">
+            <view class="block">
+                <van-icon name="clock-o" size="14"/>
+                <text>02-13</text>
+            </view>
+            <view class="block">
+                <van-icon name="eye-o" size="14" />
+                <text>98</text>
+            </view>
+            <view class="block" >
+                <van-icon name="user-o" size="14" />
+                <text>刘敏</text>
+            </view>
+        </view>
+    </view>
+</view>

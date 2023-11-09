@@ -1,0 +1,43 @@
+.news {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30rpx;
+    .pic {
+        width: 220rpx;
+        height: 150rpx;
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .text {
+        width: 440rpx;
+        height: 150rpx;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title {
+            line-height: 1.4em;
+            color: var(--globalColor);
+            font-size: 32rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-clamp: 2;
+        }
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        color: var(--descColor);
+        font-size: 28rpx;
+        .block {
+            display: flex;
+            align-items: center;
+        }
+        van-icon {
+            color: var(--descColor);
+            margin-right: 6rpx;
+        }
+    }
+}

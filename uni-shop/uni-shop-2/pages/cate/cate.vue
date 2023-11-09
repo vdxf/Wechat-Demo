@@ -15,7 +15,7 @@
           <view class="cate-lv2-title">/{{item.cat_name}}/</view>
           <view class="cate-lv2-list">
             <view class="cate-lv2-item" v-for="(item3, i3) in item.children" :key="i3" @click="gotoGoodsList(item3)">
-              <image :src="item3.cat_icon">
+              <image :src="item3.cat_icon"/>
               <text>{{item3.cat_name}}</text>
             </view>
           </view>

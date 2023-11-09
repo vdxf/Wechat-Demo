@@ -17,35 +17,35 @@
             "style" : {}
         }
     ],
-    "subPackages": [
-      {
-        "root": "subpackage",
-        "pages": [
-          {
-            "path": "goods_detail/goods_detail",
-            "style": {}
-          },
-          {
-            "path" : "goods_list/goods_list",
-            "style" :                                                                                    
-                {
-                  "navigationBarTitleText": "",
-                  "onReachBottomDistance": 150,
-                  "enablePullDownRefresh": true,
-                  "backgroundColor": "#f1f1f1"
-                }
-          },
-          {
-            "path" : "search/search",
-            "style" :                                                                                    
-                {
-                  "navigationBarTitleText": "",
-                  "enablePullDownRefresh": false
-                }
-          }
-        ]
-      }
-    ],
+  "subPackages": [
+    {
+      "root": "subpackage",
+      "pages": [
+        {
+          "path": "goods_detail/goods_detail",
+          "style": {}
+        },
+        {
+          "path" : "goods_list/goods_list",
+          "style" :                                                                                    
+              {
+                "navigationBarTitleText": "",
+                "onReachBottomDistance": 150,
+                "enablePullDownRefresh": true,
+                "backgroundColor": "#f1f1f1"
+              }
+        },
+        {
+          "path" : "search/search",
+          "style" :                                                                                    
+              {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+              }
+        }
+      ]
+    }
+  ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "购物",

@@ -3,3 +3,9 @@
     <view class="row">保留一切权利</view>
     <view class="row">未经授权，不得复制、发行、表演、展示或制作衍生作品</view>
 </view>
+<view class="kefu">
+    <button class="btn" open-type="contact">
+        <van-icon name="service-o" />
+    </button>
+    <view class="line"></view>
+</view>

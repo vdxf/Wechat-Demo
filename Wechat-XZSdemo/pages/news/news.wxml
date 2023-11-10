@@ -1,2 +1,11 @@
 <xzs-header></xzs-header>
-<text>pages/news/news.wxml</text>
+<view class="news">
+    <view class="content">
+        <view class="box" wx:for="{{newsArr}}" wx:key="item._id">
+            <xzs-news item="{{item}}"></xzs-news>
+        </view>
+    </view>
+    <view class="finished" wx:if="{{total && finished}}">
+        没有更多了~
+    </view>
+</view>

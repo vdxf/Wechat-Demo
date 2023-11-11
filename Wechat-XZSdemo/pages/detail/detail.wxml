@@ -1,0 +1,26 @@
+<!--pages/detail/detail.wxml-->
+<van-skeleton title row="3" wx:if="{{!isFinished}}"/>
+<view class="detail" wx:else>
+    <view class="title">{{detailInfo.title}}</view>
+    <view class="info">
+        <view class="left">
+            <text>{{detailInfo.publish_date}}</text>
+            <text>{{detailInfo.author}}</text>
+            <text>{{detailInfo.view_count}}阅读</text>
+        </view>
+        <view class="right">
+            <label>
+                <van-icon name="share-o" size="18"></van-icon>
+                <text>分享</text>
+                <button open-type="share" class="share" size="mini">分享</button>
+            </label>
+        </view>
+    </view>
+    <view class="content">
+        <rich-text nodes="{{detailInfo.content}}"/>
+    </view>
+    <view class="footer">
+        <view class="top">免责声明</view>
+        <view>本文来自网络</view>
+    </view>
+</view>

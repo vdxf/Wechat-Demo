@@ -9,7 +9,7 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "pages/news/news",
+                    "pathName": "pages/classify/classify",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

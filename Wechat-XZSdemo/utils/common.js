@@ -17,12 +17,12 @@ export function formatDate(data, type = 0){
     min = min < 10 ? "0" + min : min
     secont = secont < 10 ? "0" + secont : secont
     const arr = [
-        year + " - " + month + " - " + day,
-        year + " - " + month + " - " + day + " " + hour  + " : " + min + " : " + secont ,
-        year + " 年 " + month + " 月 " + day,
-        year + " 年 " + month + " 月 " + day + " " + hour  + " : " + min + " : " + secont ,
-        hour  + " : " + min + " : " + secont ,
-        month + " - " + day,
+        year + "-" + month + "-" + day,
+        year + "-" + month + "-" + day + " " + hour  + ":"  + min + ":"  + secont ,
+        year + "年" + month + "月" + day,
+        year + "年" + month + "月" + day + " " + hour  + ":"  + min + ":"  + secont ,
+        hour  + ":" + min + ":" + secont ,
+        month + "-" + day,
     ]
     return arr[type]
 }

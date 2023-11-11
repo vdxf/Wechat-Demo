@@ -1,20 +1,27 @@
 // pages/classify/classify.js
+import { reqNavData } from '../../api/index.js'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        navActive: 0,
+        navList: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.getNavList()
     },
-
+    async getNavList(){
+        const {data:res} = await reqNavData()
+        this.setData({
+            navList: res.data
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

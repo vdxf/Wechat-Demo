@@ -33,6 +33,7 @@ Page({
             item.view_count = formatNum(item.view_count)
             item.publish_date = formatDate(item.publish_date, 5)
         })
+        wx.stopPullDownRefresh()
         this.setData({
             newsArr: this.data.query.size > 0 ? [...this.data.newsArr, ...res.data] : res.data,
             total: res.total,
@@ -41,6 +42,9 @@ Page({
       },
     onPullDownRefresh() {
         this.setData({
+            newsArr: [],
+            isLoading: false,
+            finished: false,
             'query.size': 0
         })
         this.getNewsData()

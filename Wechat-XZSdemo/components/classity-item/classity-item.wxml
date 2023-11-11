@@ -1,0 +1,37 @@
+<!--components/classity-item/classity-item.wxml-->
+<view class="classItem">
+    <view class="pic">
+        <image src="/images/banner0.jpg" mode="widthFix" class="image" />
+    </view>
+    <view class="content">
+        <view class="title">112222</view>  
+        <view class="info">
+            <view class="row">
+                <view class="left">
+                    <text space="emsp">货 号：</text>
+                </view>
+                <view class="right">LM-8888</view>
+            </view>
+            <view class="row">
+                <view class="left">
+                    <text space="emsp">等 级：</text>
+                </view>
+                <view class="right">一级</view>
+            </view>
+            <view class="row">
+                <view class="left">
+                    <text space="emsp">年 份：</text>
+                </view>
+                <view class="right">2022年</view>
+            </view>
+            <view class="row">
+                <view class="left">净含量：</view>
+                <view class="right">800g</view>
+            </view>
+            <view class="row">
+                <view class="left">零售价：</view>
+                <view class="right">500</view>
+            </view>
+        </view> 
+    </view>
+</view>

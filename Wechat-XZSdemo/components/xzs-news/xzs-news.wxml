@@ -1,5 +1,5 @@
 <!--components/xzs-news/xzs-news.wxml-->
-<view class="news">
+<navigator url="/pages/detail/detail?id={{item._id}}" class="news" >
     <view class="pic">
         <image src="{{ item.picurl }}" mode="aspectFill"/>
     </view>
@@ -20,4 +20,4 @@
             </view>
         </view>
     </view>
-</view>
+</navigator>

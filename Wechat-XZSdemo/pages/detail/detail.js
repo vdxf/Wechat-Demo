@@ -1,6 +1,6 @@
 // pages/detail/detail.js
 import { formatNum, formatDate } from '../../utils/common.js';
-import { reqNewsDetail } from '../../api/index'
+import { reqNewsDetail, reqProDetail } from '../../api/index'
 Page({
 
     /**
@@ -8,6 +8,7 @@ Page({
      */
     data: {
         id: '',
+        page: '',
         detailInfo: {},
         isFinished: true,
     },
@@ -17,7 +18,8 @@ Page({
      */
     onLoad(options) {
         this.setData({
-            id: options.id
+            id: options.id,
+            page: options.page
         })
         this.getDetail()
     },
@@ -25,10 +27,18 @@ Page({
         this.setData({
             isFinished: false
         })
-        const {data:res} = await reqNewsDetail({id: this.data.id})
-        res.data.view_count = formatNum(res.data.view_count)
-        res.data.publish_date = formatDate(res.data.publish_date, 1)
-        console.log('res => ', res);
+        let res = {}
+        if (this.data.page === 'news') {
+            //获取新闻详情
+            const {data:data} = await reqNewsDetail({id: this.data.id})
+            res = data
+            res.data.view_count = formatNum(res.data.view_count)
+            res.data.publish_date = formatDate(res.data.publish_date, 1)
+        } else if (this.data.page === 'classify') {
+            // 获取产品详情
+            const {data:data} = await reqProDetail({id: this.data.id})
+            res = data
+        }
         wx.setNavigationBarTitle({
           title: res.data.title
         })

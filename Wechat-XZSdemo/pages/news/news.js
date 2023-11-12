@@ -13,7 +13,7 @@ Page({
             size: 0
         },
         total: 0,
-        isLoading: false,
+        isLoading: true,
         finished: false,
     },
 
@@ -25,7 +25,7 @@ Page({
     },
     async getNewsData(){
         this.setData({
-            isLoading: true
+            isLoading: false
         })
         const query = this.data.query
         const { data: res } = await reqNewsData(query)

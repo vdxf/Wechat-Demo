@@ -42,3 +42,37 @@
         }
     }
 }
+.classify {
+    padding: 30rpx 50rpx;
+    .image {
+        border-radius: 20rpx;
+    }
+    .title {
+        text-align: center;
+        padding: 20rpx 0;
+        font-size: 50rpx;
+        letter-spacing: 0.3em;
+        font-weight: 600;
+        color: var(--themeColor);
+        margin-bottom: 10rpx;
+    }
+    .info {
+        background-color: var(--globalBgColor2);
+        padding: 20rpx;
+        border-radius: 20rpx;
+        .row {
+            display: flex;
+            justify-content: space-between;
+            line-height: 2em;
+            .left {
+                font-size: 30rpx;
+                white-space: nowrap;
+                color: #aaa;
+            }
+            .right {
+                color: #666;
+                white-space: nowrap;
+            }
+        }
+    }
+}

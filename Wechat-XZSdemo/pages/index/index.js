@@ -25,6 +25,7 @@ Page({
   },
   async getNavData(){
     const { data: res } = await reqNavData()
+    console.log(res);
     this.setData({
         navArr: res.data
     })

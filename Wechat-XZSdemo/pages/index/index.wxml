@@ -23,7 +23,7 @@
 </view>
 <view class="scroll-nav">
     <scroll-view scroll-x>
-        <navigator url="#" class="item" wx:for="{{ navArr }}" wx:key="item._id">
+        <navigator open-type="reLaunch" url="/pages/classify/classify?index={{index}}" class="item" wx:for="{{ navArr }}" wx:key="index">
             <view class="pic">
                 <image src="{{item.icon}}" mode=""/>
             </view>
@@ -52,7 +52,7 @@
         <view class="line"></view>
     </view>
     <view class="content">
-        <view class="box" wx:for="{{newsArr}}" wx:key="item._id">
+        <view class="box" wx:for="{{newsArr}}" wx:key="index">
             <xzs-news item="{{item}}"></xzs-news>
         </view>
     </view>

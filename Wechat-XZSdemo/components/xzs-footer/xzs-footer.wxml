@@ -5,7 +5,7 @@
 </view>
 <view class="kefu">
     <button class="btn" open-type="contact">
-        <van-icon name="service-o" />
+        <van-icon name="service-o" class="vanicon" />
     </button>
     <view class="line"></view>
 </view>
